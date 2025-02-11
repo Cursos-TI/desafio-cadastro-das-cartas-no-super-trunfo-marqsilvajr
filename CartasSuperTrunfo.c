@@ -2,7 +2,7 @@
 
 int main() {
     int codigo[10];
-    char populacao[20];
+    int populacao[20];
     float area[20];
     char pib[20];
     char pontosTuristicos[20];
