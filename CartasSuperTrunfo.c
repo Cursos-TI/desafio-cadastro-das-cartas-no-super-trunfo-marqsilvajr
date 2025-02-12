@@ -1,29 +1,32 @@
 #include <stdio.h>
 
 int main() {
-    int codigo[10];
-    int populacao[20];
-    float area[20];
-    char pib[20];
-    int pontosTuristicos[20];
+    char codigo[10];
+    float populacao, area, pib, pontosTuristicos;
+    float densidadePopulacional, pibPerCapita;
 
     printf("Digite o código da carta (ex: A01): ");
-    scanf("%s", &codigo);
+    scanf("%s", codigo);
     printf("Digite a população: ");
-    scanf("%s", &populacao);
+    scanf("%f", &populacao);
     printf("Digite a área: ");
-    scanf("%s", &area);
+    scanf("%f", &area);
     printf("Digite o PIB: ");
-    scanf("%s", &pib);
+    scanf("%f", &pib);
     printf("Digite o número de pontos turísticos: ");
-    scanf("%s", &pontosTuristicos);
+    scanf("%f", &pontosTuristicos);
 
-    printf("\n- Carta: -\n");
+    densidadePopulacional = populacao / area;
+    pibPerCapita = pib / populacao;
+
+    printf("\n--- Informações da Carta ---\n");
     printf("Código: %s\n", codigo);
-    printf("População: %s\n", populacao);
-    printf("Área: %s\n", area);
-    printf("PIB: %s\n", pib);
-    printf("Pontos Turísticos: %s\n", pontosTuristicos);
+    printf("População: %.2f\n", populacao);
+    printf("Área: %.2f\n", area);
+    printf("PIB: %.2f\n", pib);
+    printf("Pontos Turísticos: %.2f\n", pontosTuristicos);
+    printf("Densidade Populacional: %.2f\n", densidadePopulacional);
+    printf("PIB per Capita: %.2f\n", pibPerCapita);
 
     return 0;
 }
